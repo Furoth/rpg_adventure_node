@@ -8,21 +8,34 @@
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/css/dado.css">
+	<script src="/socket.io/socket.io.js" charset="utf-8"></script>
+	<script type="text/javascript">
+		 var url = '<%= url %>';
+	</script>
 </head>
 <body>
 	<div class="container-fluid">
 	<div class="row"> 
 		<div id="lat-izq" class="col-lg-2 col-md-2 col-sm-1">
-			<form>
-				<label>Indica el % de zoom que desas: </label>
-				<input id="zoom" type="number" name="zoom" min="400" max="1200" step="50" style="width: 70px">
-				<i class="glyphicon glyphicon-search"></i>
-			</form>
+			<div class="row col-lg-12 col-md-12 col-sm-12 ">
+				<h3 class="col-lg-6 col-md-6 col-sm-6">Usuario: </h3><h2 id="h4user" class="col-lg-6 col-md-6 col-sm-6"><%= info.username %></h2>
+			</div>	
+			<div class="row col-lg-12 col-md-12 col-sm-12 ">
+				<h3 class="col-lg-6 col-md-6 col-sm-6">Clase: </h3><h2 id="h4clase" class="col-lg-6 col-md-6 col-sm-6"><%= info.clase %></h2>
+			</div>
+			<div class="row col-lg-12 col-md-12 col-sm-12 ">
+				<h3 class="col-lg-6 col-md-6 col-sm-6">Cash: </h3><h2 id="h4cash" class="col-lg-6 col-md-6 col-sm-6">0</h2>
+			</div>	
 		</div>
 		<div id="tablero" class="col-lg-8 col-md-8 col-sm-12">	
 
 		</div>
 		<div id="lat-der" class="col-lg-2 col-md-2 col-sm-1">
+			<form>
+				<label>Indica juega con el zoom: </label>
+				<input id="zoom" type="number" name="zoom" min="400" max="1200" step="50" style="width: 70px">
+				<i class="glyphicon glyphicon-search"></i>
+			</form>
 			<div class="wrap">
    				<div id="dice" class="dice dice_1" onclick="play()"></div>
    				<audio id="audio" src="/sounds/dice.wav" ></audio>
@@ -42,6 +55,7 @@
 	<script type="text/javascript" src="/js/casillas.js"></script>
 	<script type="text/javascript" src="/js/casillas_selec.js"></script>
 	<script type="text/javascript" src="/js/avatar.js"></script>
+	<script type="text/javascript" src="/js/partida.js"></script>
 	<script type="text/javascript" src="/js/custom.js"></script>
 	
 
@@ -53,6 +67,6 @@
    		var audio = document.getElementById("audio");
   		audio.play();
     }
-	</script>
+    </script>
 </body>
 </html>

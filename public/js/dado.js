@@ -26,48 +26,17 @@ class dadico {
 			$('#dice').css('cursor','pointer');
 			$("#dice_mask").remove();//remove mask
 			if(this.num){
-				/*for(var i = 1; i <= i+this.num; i++ )
-				{
-					if(arr_casillas[i].seleccion == true){
-						var dire = prompt("arriba o abajo");
-						if (dire == "up") {
-							i = arr_casillas[i].next_up;
-						}
-						if (dire == "down") {
-							i = arr_casillas[i].next_down;
-						}
-					}
-					ava.move();
-					this.num = this.num-1;	
-				}*/
-				/*while(this.num>0){
-					if(arr_casillas[this.i].seleccion == true){
-						var dire = prompt("arriba o abajo");
-						if (dire == "up") {
-							ava.update(arr_casillas[this.i].x,arr_casillas[this.i].y);
-							this.i = arr_casillas[this.i].up;
-							
-							//ava.move();
-						}
-						if (dire == "down") {
-							//console.log(arr_casillas[i]);
-							ava.update(arr_casillas[this.i].x,arr_casillas[this.i].y);
-							this.i = arr_casillas[this.i].down;
-							
-							//ava.move();
-						}
-					} else {
-						console.log(arr_casillas[this.i].id	+'rect');
-						ava.update(arr_casillas[this.i].x,arr_casillas[this.i].y);
-						this.i = arr_casillas[this.i].next;
-						
-					}
-					console.log(this.num);
-					
-					this.num--;
-					this.i++;
-				}*/
+				
 				ava.move(this.num);
+				var evento = ava.getCasilla();
+				if(evento == 2 || evento == 4 || evento == 5 || evento == 10 || evento == 14 || evento == 15 || evento == 21 || evento == 24){
+					ava.lucha();	
+				} else if(evento == 7 || evento == 9 || evento == 11 || evento == 17 || evento == 20 || evento == 23 || evento == 26){
+					ava.bonus();
+				} else if (evento == 27){
+					ava.lucha_boss();
+				}
+				
 			}
 			
 		});

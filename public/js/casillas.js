@@ -12,4 +12,5 @@ class casillas_obj{
 	draw(){
 		group_casillas.image(this.image, this.width, this.height).move(this.x, this.y).attr({id: this.id});
 	}
+
 }
