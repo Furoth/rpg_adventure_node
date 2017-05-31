@@ -27,9 +27,9 @@ flecha.animate(800).move(360,213).loop();
 
 var cas3 = new casillas_selec(400,200,60,80, 'cas3', 'img/casillas/vacia.svg', 4, 16);
 cas3.draw();
-flecha = draw.image('img/casillas/arrow.svg',40,60).move(410,160).rotate(-180);
+flecha = draw.image('img/casillas/arrow.svg',40,60).move(410,160).rotate(-180).attr({id: "flecha3up"});
 flecha.animate(800).move(410,163).loop();
-flecha = draw.image('img/casillas/arrow.svg',40,60).move(410,260);
+flecha = draw.image('img/casillas/arrow.svg',40,60).move(410,260).attr({id: "flecha3down"});
 flecha.animate(800).move(410,263).loop();
 
 var cas4 = new casillas_obj(400,100,60,80, 'cas4', 'img/casillas/lucha.svg', 5);

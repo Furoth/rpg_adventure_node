@@ -14,13 +14,13 @@ router.get("/", function(req, res){
 
 router.post('/index',(req,res)=>{
 	var info = req.body;
-	Personajes.find({nombre: req.body.clase},function(err,pj){
+	Personajes.findOne({nombre: req.body.clase},function(err,pj){
 		res.render('pages/index', {
 			info: info,
-			url: pj[0].img
+			pj: pj
 		});
 	});
-	
-})
+});
+
 
 module.exports = router;

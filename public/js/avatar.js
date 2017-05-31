@@ -18,6 +18,7 @@ class avatar{
 			if(this.x < 1200){
 				if(this.casilla == 3 || this.casilla == 6 || this.casilla == 9 || this.casilla == 12 || this.casilla == 15 || this.casilla == 18 || this.casilla == 24 || this.casilla == 25){
 				if(this.casilla == 3){
+					//$("#flecha3up").attr({filter: "brightness(200%)"});
 					var dire = prompt("Up or down");
 					if(dire == "up"){
 						this.y = this.y-100;
@@ -162,14 +163,16 @@ class avatar{
 	}
 
 	lucha(){
-		alert("Lucha");
+		var lucha = window.open("","lucha","toolbar=no,resizable=no,top=200,left=500,width=800,height=556");
+		var code = "<svg id='lucha' width='100% height='100%'><img src='../img/characters/enemigos/normal/goblin.png'></img><button type='button'>Lucha</button</svg>";
+		lucha.document.write(code);
 	}
 
 	bonus(){
 		var dineros = [75,100,125,150,175,200];
 		var random = Math.floor(Math.random()*5);
 		this.cash = this.cash+dineros[random];
-		$("#h4cash").html(this.cash);
+		$("#h2cash").html(this.cash);
 	}
 
 	lucha_boss(){

@@ -36,7 +36,7 @@ var enemigosSchema = {nombre:String, clase:String , img:String, atk:Number, def:
 var enemigos_Schema = new Schema(enemigosSchema);
 var Enemigos = mongoose.model("Enemigos", enemigos_Schema);
 
-var nuevo = new Enemigos({nombre:"Goblin",clase:"Normal", img: "/img/characters/enemigos/goblin.png", atk:6, def:5, hp:6});
+var nuevo = new Enemigos({nombre:"Goblin",clase:"Normal", img: "/img/characters/enemigos/normal/goblin.png", atk:6, def:5, hp:6});
 nuevo.save(function(err){ console.log(err); });
-var nuevo = new Enemigos({nombre:"Ogro",clase:"Jefe", img: "/img/characters/enemigos/ogro.png", atk:16, def:19, hp:20});
+var nuevo = new Enemigos({nombre:"Ogro",clase:"Jefe", img: "/img/characters/enemigos/boss/ogro.png", atk:16, def:19, hp:20});
 nuevo.save(function(err){ console.log(err); });

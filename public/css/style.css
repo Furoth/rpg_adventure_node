@@ -13,11 +13,12 @@ svg{
 }
 
 #lat-izq, #lat-der{
-	background-color: lightgreen;
+	background-image: url('../img/battlebg/wood.jpg');
+	background-size: cover;
 	margin: 0;
 	padding: 0;
 	width: 20%;
-	height: 100%;
+	height: 800px;
 }
 
 #prueba{
@@ -69,4 +70,10 @@ svg{
 	height: 100px;
 	background: url('../img/characters/guerrero/Swordsman.png');
 	z-index: 998;
+}
+
+#lucha{
+	background-image: url('../img/battlebg/CmBkGrTr.png');
+	background-repeat: no-repeat;
+	background-size: contain;
 }

@@ -10,24 +10,33 @@
 	<link rel="stylesheet" type="text/css" href="/css/dado.css">
 	<script src="/socket.io/socket.io.js" charset="utf-8"></script>
 	<script type="text/javascript">
-		 var url = '<%= url %>';
+		 var url = '<%= pj.img %>';
 	</script>
 </head>
 <body>
 	<div class="container-fluid">
 	<div class="row"> 
-		<div id="lat-izq" class="col-lg-2 col-md-2 col-sm-1">
+		<div id="lat-izq" class="col-lg-2 col-md-2 col-sm-1" style="padding: 20px 0 0 20px">
 			<div class="row col-lg-12 col-md-12 col-sm-12 ">
-				<h3 class="col-lg-6 col-md-6 col-sm-6">Usuario: </h3><h2 id="h4user" class="col-lg-6 col-md-6 col-sm-6"><%= info.username %></h2>
+				<h3 class="col-lg-6 col-md-6 col-sm-6" style="padding: 0; margin: 0">Usuario: </h3><h2 id="h2user" class="col-lg-6 col-md-6 col-sm-6" style="padding: 0; margin: 0"><%= info.username %></h2>
 			</div>	
-			<div class="row col-lg-12 col-md-12 col-sm-12 ">
-				<h3 class="col-lg-6 col-md-6 col-sm-6">Clase: </h3><h2 id="h4clase" class="col-lg-6 col-md-6 col-sm-6"><%= info.clase %></h2>
+			<div class="row col-lg-12 col-md-12 col-sm-12 " style="margin-top: 20px;">
+				<h3 class="col-lg-6 col-md-6 col-sm-6" style="padding: 0; margin: 0">Clase: </h3><h2 id="h2clase" class="col-lg-6 col-md-6 col-sm-6" style="padding: 0; margin: 0"><%= pj.clase %></h2>
 			</div>
-			<div class="row col-lg-12 col-md-12 col-sm-12 ">
-				<h3 class="col-lg-6 col-md-6 col-sm-6">Cash: </h3><h2 id="h4cash" class="col-lg-6 col-md-6 col-sm-6">0</h2>
+			<div class="row col-lg-12 col-md-12 col-sm-12 " style="margin-top: 20px;">
+				<h3 class="col-lg-6 col-md-6 col-sm-6" style="padding: 0; margin: 0">Dinero: </h3><h2 id="h2cash" class="col-lg-6 col-md-6 col-sm-6" style="padding: 0; margin: 0">0</h2>
+			</div>
+			<div class="row col-lg-12 col-md-12 col-sm-12 " style="margin-top: 20px;">
+				<h3 class="col-lg-6 col-md-6 col-sm-6" style="padding: 0; margin: 0">Nivel: </h3><h2 id="h2lvl" class="col-lg-6 col-md-6 col-sm-6" style="padding: 0; margin: 0">0</h2>
+			</div>
+			<div class="row col-lg-12 col-md-12 col-sm-12 " style="margin-top: 20px;">
+				<h3 class="col-lg-6 col-md-6 col-sm-6" style="padding: 0; margin: 0">Hp: </h3><h2 id="h2hp" class="col-lg-6 col-md-6 col-sm-6" style="padding: 0; margin: 0"><%= pj.hp %>/<%= pj.hp %></h2>
 			</div>	
+			<div class="row col-lg-12 col-md-12 col-sm-12 " style="margin-top: 20px;">
+				<h3 class="col-lg-6 col-md-6 col-sm-6" style="padding: 0; margin: 0">Avatar: </h3><img src="<%= pj.img %>" id="h2ava" class="col-lg-6 col-md-6 col-sm-6" style="padding: 0; margin: 0"></img>
+			</div>
 		</div>
-		<div id="tablero" class="col-lg-8 col-md-8 col-sm-12">	
+		<div id="tablero" class="col-lg-8 col-md-8 col-sm-12" style="box-shadow: 4px 5px 34px 8px rgba(0,0,0,0.75); z-index: 998">	
 
 		</div>
 		<div id="lat-der" class="col-lg-2 col-md-2 col-sm-1">
