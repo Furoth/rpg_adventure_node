@@ -9,7 +9,8 @@ class avatar{
 			id: 'avatar'
 		});	
 		this.casilla = 0;
-		this.cash = 0;	
+		this.cash = 0;
+		this.lvl = 0;
 	}
 
 	move(x){
@@ -18,12 +19,11 @@ class avatar{
 			if(this.x < 1200){
 				if(this.casilla == 3 || this.casilla == 6 || this.casilla == 9 || this.casilla == 12 || this.casilla == 15 || this.casilla == 18 || this.casilla == 24 || this.casilla == 25){
 				if(this.casilla == 3){
-					//$("#flecha3up").attr({filter: "brightness(200%)"});
-					var dire = prompt("Up or down");
-					if(dire == "up"){
+					var dire = prompt("Arriba o abajo");
+					if(dire == "arriba" || dire == "Arriba"){
 						this.y = this.y-100;
 						this.casilla = 4;
-					} else if(dire == "down"){
+					} else if(dire == "abajo" || dire == "Abajo"){
 						this.y = this.y+100;
 						this.casilla = 16;
 					} else {
@@ -42,11 +42,11 @@ class avatar{
 						});
 					}
 				} else if(this.casilla == 6){
-					var dire = prompt("Up or down");
-					if(dire == "up"){
+					var dire = prompt("Arriba o abajo");
+					if(dire == "arriba" || dire == "Arriba"){
 						this.y = this.y-100;
 						this.casilla = 7;
-					} else if(dire == "down"){
+					} else if(dire == "abajo" || dire == "Abajo"){
 						this.y = this.y+100;
 						this.casilla = 13;
 					} else {
@@ -65,11 +65,11 @@ class avatar{
 						});
 					}
 				} else if(this.casilla == 18){
-					var dire = prompt("Up or down");
-					if(dire == "up"){
+					var dire = prompt("Arriba o abajo");
+					if(dire == "arriba" || dire == "Arriba"){
 						this.y = this.y-100;
 						this.casilla = 13;
-					} else if(dire == "down"){
+					} else if(dire == "abajo" || dire == "Abajo"){
 						this.y = this.y+100;
 						this.casilla = 19;
 					} else {
@@ -152,7 +152,7 @@ class avatar{
 						});
 					}
 					this.casilla = 27;
-				} 
+				}
 			}else{
 				this.x = this.x + 100;
 				this.pj.animate(500).attr({x : this.x.toString(), y: this.y.toString()});
@@ -163,7 +163,17 @@ class avatar{
 	}
 
 	lucha(){
-		var lucha = window.open("lucha","_blank","toolbar=no,resizable=no,top=200,left=500,width=800,height=556");
+		alert('Para derrotar al enemigo necesitas sacar entre 0 y 4');
+		var random = Math.floor(Math.random()*5);
+		if(random == 0 || random == 1 || random == 2 || random == 3 || random == 4){
+			this.lvl = this.lvl + 1;
+			$("#h2lvl").html(this.lvl);
+			alert('Has ganado con un ' + random);
+		} else {
+			alert('Has perdido con un ' + random);
+			window.location.replace('lucha');
+		}
+		
 	}
 
 	bonus(){
@@ -174,11 +184,21 @@ class avatar{
 	}
 
 	lucha_boss(){
-		alert("Lucha boss");
+		alert('Para derrotar al jefe necesitas sacar entre 0 y 2');
+		var random = Math.floor(Math.random()*10);
+		if(random == 0 || random == 1 || random == 2){
+			this.lvl = this.lvl + 5;
+			$("#h2lvl").html(this.lvl);
+			alert('Has ganado con un ' + random);
+		} else {
+			alert('Has perdido con un ' + random);
+			window.location.replace('lucha');
+		}
 	}
 
 	fin(){
 		alert("Partida finalizada");
+		window.location.replace('lucha');
 	}
 
 	getCasilla(){

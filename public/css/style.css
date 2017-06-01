@@ -28,9 +28,9 @@ svg{
 }
 
 #ventana_lucha{
-	background-image: url('../img/battlebg/CmBkGrTr.png');
-	background-repeat: no-repeat;
-	background-size: contain;
+	position: relative;
+	width: 800px;
+	height: 550px;
 }
 
 .inactiva{

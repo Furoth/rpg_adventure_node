@@ -168,7 +168,7 @@ var ava;
 ava = new avatar(110, 160, url);
 
 /*Viewbox*/
-var view = draw.viewbox(ava.x, ava.y-250, 550, 500);
+var view = draw.viewbox(ava.x, ava.y-150, 550, 500);
 view.zoom;
 $("#zoom").change(function(){
 	view.viewbox(ava.x-150, ava.y-300, $(this).val(), $(this).val());

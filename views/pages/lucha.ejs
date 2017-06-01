@@ -9,17 +9,12 @@
 	<link rel='stylesheet' type='text/css' href='/css/style.css'>
 	<link rel='stylesheet' type='text/css' href='/css/dado.css'>
 	<script src='/socket.io/socket.io.js' charset='utf-8'></script>
-	<script type='text/javascript'>
-		 var url = '<%= pj.img %>';
-		 var url_vic = '<%= pj.img_vic %>';
-	</script>
 </head>
 <body>
-	<div class='container-fluid'>
-		<div id="ventana_lucha">
-			<img src="<%= pj.img %>"/>
-			<img src="../img/characters/enemigos/normal/goblin.png"/>
-			
+	<div class='container'>
+		<div class="jumbotron" style="margin-top:10%;border-radius: 10px;box-shadow: 0 8px 16px -6px black;">
+			<h2>Tu aventura en RPG Adventure ha terminado</h2>
+			<button type="button" class="btn btn-primary" onclick="window.location.replace('/');">Volver al inicio</button>	
 		</div>
 	</div>
 	
