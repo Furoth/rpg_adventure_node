@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RPG Adventure</title>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel='icon' type='image/png' href='/img/favicon.png'>
+	<link rel='stylesheet' type='text/css' href='/css/bootstrap.min.css'>
+	<link rel='stylesheet' type='text/css' href='/css/style.css'>
+	<link rel='stylesheet' type='text/css' href='/css/dado.css'>
+	<script src='/socket.io/socket.io.js' charset='utf-8'></script>
+	<script type='text/javascript'>
+		 var url = '<%= pj.img %>';
+		 var url_vic = '<%= pj.img_vic %>';
+	</script>
+</head>
+<body>
+	<div class='container-fluid'>
+		<div id="ventana_lucha">
+			<img src="<%= pj.img %>"/>
+			<img src="../img/characters/enemigos/normal/goblin.png"/>
+			
+		</div>
+	</div>
+	
+	
+	
+	<script type='text/javascript' src='/js/svg.js'></script>
+	<script type='text/javascript' src='/js/jquery-3.2.1.js'></script>
+	<script type='text/javascript' src='/js/bootstrap.min.js'></script>
+
+	<script type='text/javascript' src='/js/dado.js'></script>
+	<script type='text/javascript' src='/js/casillas.js'></script>
+	<script type='text/javascript' src='/js/casillas_selec.js'></script>
+	<script type='text/javascript' src='/js/avatar.js'></script>
+	<script type='text/javascript' src='/js/partida.js'></script>
+	<script type='text/javascript' src='/js/custom.js'></script>
+	
+</body>
+</html>

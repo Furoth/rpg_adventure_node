@@ -35,6 +35,8 @@ class dadico {
 					ava.bonus();
 				} else if (evento == 27){
 					ava.lucha_boss();
+				} else if(evento == 28){
+					ava.fin();
 				}
 				
 			}

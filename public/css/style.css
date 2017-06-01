@@ -23,6 +23,12 @@ svg{
 
 #prueba{
 	background-image: url('../img/battlebg/CmBkGrTr.png');
+	background-repeat: repeat-y;
+	background-size: contain;
+}
+
+#ventana_lucha{
+	background-image: url('../img/battlebg/CmBkGrTr.png');
 	background-repeat: no-repeat;
 	background-size: contain;
 }
@@ -37,32 +43,6 @@ svg{
 	margin: 0;
 	padding: 0;
 }
-
-#back_image{
-	position: relative;
-	width: 100%;
-	background-image: url('../img/battlebg/CmBkGrTr.png');
-	color: #FF3737;
-	-webkit-animation: flash linear 1.8s infinite;
-	animation: flash linear 1.5s infinite;
-}
-
-@-webkit-keyframes flash {
-	0% { filter:hue-rotate(0deg); } 
-	50% { filter:hue-rotate(180deg); } 
-	100% { filter:hue-rotate(0deg); }
-}
-@keyframes flash {
-	0% { filter:hue-rotate(0deg); } 
-	50% { filter:hue-rotate(180deg); } 
-	100% { filter:hue-rotate(0deg); }
-}
-
-/*#casilla{
-	position: absolute;
-	margin: 0;
-	padding: 0;
-}*/
 
 #avatar{
 	overflow: hidden;

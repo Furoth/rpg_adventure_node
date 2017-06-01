@@ -1,9 +1,9 @@
 class avatar{
 
-	constructor(pos_x, pos_y,url){
+	constructor(pos_x, pos_y,url_ava){
 		this.x = pos_x;
 		this.y = pos_y;
-		this.pj = draw.image(url).attr({ 
+		this.pj = draw.image(url_ava).attr({ 
 			x: this.x,
 			y: this.y,
 			id: 'avatar'
@@ -163,9 +163,7 @@ class avatar{
 	}
 
 	lucha(){
-		var lucha = window.open("","lucha","toolbar=no,resizable=no,top=200,left=500,width=800,height=556");
-		var code = "<svg id='lucha' width='100% height='100%'><img src='../img/characters/enemigos/normal/goblin.png'></img><button type='button'>Lucha</button</svg>";
-		lucha.document.write(code);
+		var lucha = window.open("lucha","_blank","toolbar=no,resizable=no,top=200,left=500,width=800,height=556");
 	}
 
 	bonus(){
@@ -177,6 +175,10 @@ class avatar{
 
 	lucha_boss(){
 		alert("Lucha boss");
+	}
+
+	fin(){
+		alert("Partida finalizada");
 	}
 
 	getCasilla(){

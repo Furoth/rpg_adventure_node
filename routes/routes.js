@@ -22,5 +22,14 @@ router.post('/index',(req,res)=>{
 	});
 });
 
+router.post('/lucha',(req,res)=>{
+	var info = req.body;
+	Personajes.findOne({nombre: req.body.clase},function(err,pj){
+		res.render('pages/lucha', {
+			info: info,
+			pj: pj
+		});
+	});
+});
 
 module.exports = router;
